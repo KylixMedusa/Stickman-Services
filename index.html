@@ -11,7 +11,7 @@
         <style>
         </style>
         <body>
-            <div class="nav--header">
+            <div id="nav--header" class="nav--header">
                 <div class="nav--top">
                     <div><span>Taral Industries Private Limited</span></div>
                     <div><p><span>+91 99306 04477</span><i class="fa fa-phone"></i></p><p><span>info@taralcorporation.com</span><i class="fa fa-envelope-open"></i></p></div>
@@ -29,6 +29,7 @@
                     </nav>
                 </header>
             </div>
+            <div id="main--content">
             <div class="top--section">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -164,6 +165,8 @@
                     </div>
                 </div>
             </footer>
+            </div>
+            <button id="scroll--up" onclick="scrolltoTop()"><i class="fa fa-angle-up"></i></button>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -176,6 +179,19 @@
                 document.getElementById("nav__menu").classList.remove("open");
             })
             $('.carousel').carousel();
+            window.onscroll = function(){
+                if((window.scrollY+document.getElementById("nav--header").clientHeight) >= document.body.clientHeight)
+                {
+                    document.getElementById("scroll--up").style.display="flex";
+                }
+                else{
+                    document.getElementById("scroll--up").style.display="none";
+                }
+            };
+            function scrolltoTop(){
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
         </script>
     </body>
 </html>

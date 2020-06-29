@@ -444,6 +444,23 @@ footer .block:last-child h6{
     padding:0;
     margin-left: 5px;
 }
+#scroll--up{
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+    bottom:2vw;
+    right:2vw;
+    background-color: #001e57;
+    height:50px;
+    width:50px;
+    border: 2px solid #ddd;
+    outline:0;
+    font-size: 2rem;
+    color:white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
 @media screen and (max-width: 1000px) {
     .nav--top > div:first-child{
         width:40%;
